@@ -27,7 +27,7 @@ fs.readFile("car.csv", "utf-8", (err, cars) => {
     });
 
     console.log(carCustomer_Data);
-    // CREATING THE FILE AND WRITING DATA IN IT
+    // CREATING THE FILE AND WRITING DATA IN THE FILE
     fs.writeFile(
       "async_carCustomer_Data",
       JSON.stringify(carCustomer_Data),

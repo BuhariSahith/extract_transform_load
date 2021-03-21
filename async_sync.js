@@ -9,7 +9,8 @@ fs.readFile("car.csv", "utf-8", (err, cars) => {
 
   // READIND THE CUSTOMER.CSV FILE
   fs.readFile("customer.csv", "utf-8", (err, customers) => {
-    const customerJsonData = csvToJson(customers);
+    let customerJsonData = csvToJson(customers);
+
     const carCustomer_Data = [];
 
     customerJsonData.forEach((customer) => {
@@ -26,8 +27,10 @@ fs.readFile("car.csv", "utf-8", (err, cars) => {
       });
     });
 
-    console.log(carCustomer_Data);
-    // CREATING THE FILE AND WRITING DATA IN IT
+    console.table(carCustomer_Data);
+
+
+    // CREATING THE FILE AND WRITING DATA IN THE FILE
     fs.writeFileSync(
       "async_sync_carCustomer_Data",
       JSON.stringify(carCustomer_Data),

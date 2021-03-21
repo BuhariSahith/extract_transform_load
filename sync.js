@@ -3,6 +3,7 @@ const csvToJson = require("./utils");
 
 // use fs.readFileSync and fs.writeFileSync
 
+// READING THE BOTH FILES 
 const cars = fs.readFileSync("car.csv", "utf-8");
 const customers = fs.readFileSync("customer.csv", "utf-8");
 
